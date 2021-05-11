@@ -1,0 +1,214 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{DiscoTape}[2021/05/10 Tape]
+
+\RequirePackage{imakeidx}
+\RequirePackage{xstring}
+\RequirePackage{xcolor}
+\definecolor{intellect}{HTML}{6ABDCD}
+\definecolor{psyche}{HTML}{604D92}
+\definecolor{physique}{HTML}{CB4A71}
+\definecolor{motorics}{HTML}{D6C354}
+\definecolor{texto}{HTML}{CCCCCC}
+\definecolor{harry}{HTML}{6A7C85}
+\definecolor{white}{HTML}{FFFFFF}
+\definecolor{opcion}{HTML}{CC4824}
+\definecolor{item}{HTML}{94BA78}
+\definecolor{itemdescription}{HTML}{94BA78}
+\newcommand{\intel}{intellect}
+\newcommand{\psy}{psyche}
+\newcommand{\phy}{physique}
+\newcommand{\mot}{motorics}
+\newcommand{\dis}{texto}
+\newcommand{\harry}{harry}
+\newcommand{\whitename}{white}
+\newcommand{\option}{opcion}
+\newcommand{\obj}{item}
+
+
+%%Important words are added to the index and printed in different colour
+\newcommand{\disc}[1]
+{
+ {\textcolor{\dis}{#1}}
+}
+
+\newcommand{\talk}[1]
+{
+ {\textcolor{\whitename}{\textbf{#1}}}
+}
+\newcommand{\opt}[1]
+{
+ {\textcolor{\option}{#1}}
+}
+\newcommand{\ite}[1]
+{
+  {\textcolor{\obj}{ITEM GAINED:}}
+ {\textcolor{\obj}{#1}}
+}
+
+\newcommand{\you}[1]
+{
+  {\textcolor{\harry}{\textbf{YOU}}}  
+  {\textcolor{\harry}{\textbf{---}}}
+ {\textcolor{\harry}{#1}}
+}
+
+\newcommand{\anci}[1]
+{
+  {\textcolor{\whitename}{\textbf{ANCIENT REPTILIAN BRAIN}}}  
+  {\textcolor{\whitename}{\textbf{---}}}\\
+  {\textcolor{\dis}{#1}}
+}
+
+
+\newcommand{\limb}[1]
+{
+  {\textcolor{\whitename}{\textbf{LIMBIC SYSTEM}}}  
+  {\textcolor{\whitename}{\textbf{---}}}
+	{\textcolor{\dis}{#1}}
+}
+
+
+\newcommand{\logi}[1]
+{
+  {\textcolor{\intel}{\textbf{LOGIC}}}  
+  {\textcolor{\dis}{\textbf{---}}}
+	{\textcolor{\dis}{#1}}
+}
+\newcommand{\ency}[1]
+{
+  {\textcolor{\intel}{\textbf{ENCYCLOPEDIA}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+}
+\newcommand{\rhet}[1]
+{
+  {\textcolor{\intel}{\textbf{RHETORIC}}}
+  {\textcolor{\dis}{\textbf{---}}}  
+{\textcolor{\dis}{#1}}
+}
+\newcommand{\dram}[1]
+{
+  {\textcolor{\intel}{\textbf{DRAMA}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+}
+\newcommand{\conc}[1]
+{
+  {\textcolor{\intel}{\textbf{CONCEPTUALIZATION}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+}
+\newcommand{\visu}[1]
+{
+  {\textcolor{\intel}{\textbf{VISUAL CALCULUS}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+}
+\newcommand{\voli}[1]
+{
+  {\textcolor{\psy}{\textbf{VOLITION}}}
+  {\textcolor{\dis}{\textbf{---}}}   
+{\textcolor{\dis}{#1}}
+}
+\newcommand{\inla}[1]
+{
+  {\textcolor{\psy}{\textbf{INLAND EMPIRE}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\empa}[1]
+{
+  {\textcolor{\psy}{\textbf{EMPATHY}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\auth}[1]
+{
+  {\textcolor{\psy}{\textbf{AUTHORITY}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\espr}[1]
+{
+  {\textcolor{\psy}{\textbf{ESPIRIT DE CORPS}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\sugg}[1]
+{
+  {\textcolor{\psy}{\textbf{SUGGESTION}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\con}[1]
+{
+  {\textcolor{\phy}{\textbf{ENDURANCE}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\pain}[1]
+{
+  {\textcolor{\phy}{\textbf{PAIN THRESHOLD}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\phys}[1]
+{
+  {\textcolor{\phy}{\textbf{PHYSICAL INSTRUMENT}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\elec}[1]
+{
+  {\textcolor{\phy}{\textbf{ELECTRO-CHEMISTRY}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\shiv}[1]
+{
+  {\textcolor{\phy}{\textbf{SHIVERS}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+\newcommand{\half}[1]
+{
+  {\textcolor{\phy}{\textbf{HALF LIGHT}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+ \newcommand{\hand}[1]
+{
+  {\textcolor{\mot}{\textbf{HAND/EYE COORDINATION}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+ \newcommand{\perc}[1]
+{
+  {\textcolor{\mot}{\textbf{PERCEPTION}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+ \newcommand{\reac}[1]
+{
+  {\textcolor{\mot}{\textbf{REACTION SPEED}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+ \newcommand{\savo}[1]
+{
+  {\textcolor{\mot}{\textbf{SAVOIR FAIRE}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+ \newcommand{\inte}[1]
+{
+  {\textcolor{\mot}{\textbf{INTERFACING}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 
+ \newcommand{\comp}[1]
+{
+  {\textcolor{\mot}{\textbf{COMPOSURE}}}
+  {\textcolor{\dis}{\textbf{---}}}
+{\textcolor{\dis}{#1}}
+} 

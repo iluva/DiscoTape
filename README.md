@@ -10,11 +10,17 @@ The commands are simple. Slash(\) and the first four first letters of the skill 
 
 There are some exceptions:
 Endurance is \con, not \endu
+
 When "you" speak you should use \you{text}, this will print: YOU --- text
+
 For items (ITEM GAINED: 9mm pistol), you should use \ite
+
 Ancient reptilian brain and limbic system are \anci and \limb
+
 For other people or objects you want to make talk use \talk{nameofthespeaker ---] and \disc{text} to the message, this will print: NAMEOFTHESPEAKER --- text
+
 For options you should use \disc{1.-}\opt{Walk away.}, this will print: 1.-Walk away
+
 See the pictures in the project for more help.
 
 
